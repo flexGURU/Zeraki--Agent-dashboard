@@ -1,4 +1,8 @@
 # sales-agent-dashboard
+
+![dashboard](https://github.com/flexGURU/-Zeraki-sales-agent-dashboard/assets/88624924/b66178b0-53e5-4907-9d1f-f4d58638ca6b)
+![edit](https://github.com/flexGURU/-Zeraki-sales-agent-dashboard/assets/88624924/894dab49-9785-4a5f-a685-ce8f4cad3520)
+![schools](https://github.com/flexGURU/-Zeraki-sales-agent-dashboard/assets/88624924/de8d244c-5b88-469a-bc77-9f77bf4610cd)
 a comprehensive Angular web application designed to efficiently manage schools, invoices, and collections through intuitive dashboards, data visualizations, and seamless CRUD operations.
 
 ## Features
