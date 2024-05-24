@@ -1,0 +1,59 @@
+<div class="container">
+    <legend>Edit School</legend>
+    <form>
+  
+      <div class="mb-3">
+        <label for="txtId" class="form-label">ID</label>
+        <input type="number" name="id" [(ngModel)]= "formdata.id" class="form-control" id="txtId" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtName" class="form-label">Name</label>
+        <input type="text" name="name" [(ngModel)] = "formdata.name" class ="form-control" id="txtName" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtType" class="form-label">Type</label>
+        <select name="type"  [(ngModel)] = "formdata.type" class="form-control" id="txtType">
+          <option value="Primary">Primary</option>
+          <option value="Secondary">Secondary</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtProducts" class="form-label">Products</label>
+        <select name="products" [(ngModel)]= "formdata.products" multiple class="form-control" id="txtProducts">
+          <option value="Zeraki Analytics">Zeraki Analytics</option>
+          <option value="Zeraki Finance">Zeraki Finance</option>
+          <option value="Zeraki Timetable">Zeraki Timetable</option>
+        </select>
+      </div>
+      
+      
+      <div class="mb-3">
+        <label for="txtCounty" class="form-label">County</label>
+        <input type="text" name="county" [(ngModel)] = "formdata.county" class="form-control" id="txtCounty" />
+      </div>
+      <div class="mb-3">
+        <label for="txtRegistrationDate" class="form-label">Registration Date</label>
+        <input type="date" name="registrationDate" [(ngModel)] = "formdata.registrationDate" class="form-control" id="txtRegistrationDate" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtEmail" class="form-label">Email</label>
+        <input type="email" name="email" [(ngModel)] = "formdata.contactInfo.email" class="form-control" id="txtEmail" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtPhone" class="form-label">Phone</label>
+        <input type="tel" name="phone" [(ngModel)] = "formdata.contactInfo.phone" class="form-control" id="txtPhone" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtBalance" class="form-label">Balance</label>
+        <input type="number" name="balance" [(ngModel)] = "formdata.balance" class="form-control" id="txtBalance" />
+      </div>
+      <button type="button" (click)= "update()" class="btn btn-primary"> Update </button>
+    </form>
+  </div>
+

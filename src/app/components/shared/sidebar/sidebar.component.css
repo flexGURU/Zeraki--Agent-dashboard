@@ -1,0 +1,24 @@
+/* Adjusting the width of the sidenav */
+.example-container {
+  height: 100%;
+}
+
+
+mat-sidenav {
+  width: 150px; 
+  background-color: #dfdfdf; 
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+mat-nav-list a {
+  color: white; 
+  text-decoration: none; 
+  display: block;
+  padding: 12px 16px; 
+}
+
+mat-nav-list a:hover {
+  background-color: #417f35; 
+}

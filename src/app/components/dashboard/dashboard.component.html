@@ -1,0 +1,103 @@
+
+<div class="container">
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+<div class="dashboard">
+  
+    <mat-card class="metric">
+      <h3>Collections: </h3>
+      <h3> {{ collections.length }}</h3>
+
+      <p></p>
+    </mat-card>
+  
+    <mat-card class="metric">
+      <h3>Sign-ups: </h3>
+      <h3> {{ schools.length }} </h3>
+
+      <p></p>
+    </mat-card>
+  
+    <mat-card class="metric">
+      <h3>Total Revenue: </h3>
+      <h3> {{ calculateTotalRevenue() }} </h3>
+
+      <p></p>
+    </mat-card>
+  
+    <mat-card class="metric">
+      <h3>Bounced Cheques: </h3>
+      <h3> {{ countBouncedCheques() }} </h3>
+    </mat-card>
+
+
+      <div>
+      
+
+  <div class="upcoming-invoices">
+    <div *ngIf="invoices.length > 0">
+      <h2>Upcoming Invoices</h2>
+      <div>
+        <button (click)="showInvoices()">Show Invoices</button>
+      </div>
+      <ul>
+        <li *ngFor="let invoice of sortedInvoices">
+          <div class="invoice-item">
+            <span class="invoice-detail">Invoice ID: {{ invoice.id }}</span>
+            <span class="invoice-detail">Amount Due: {{ invoice.balance }}</span>
+            <span class="invoice-detail">Due Date: {{ invoice.dueDate }}</span>
+            <button class="collect-btn" (click)="collectPayment(invoice)">Collect Payment</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+  
+    <div *ngIf="selectedInvoice" class="modal">
+      <h3>Collect Payment for {{ getSchoolName(selectedInvoice.schoolId) }}</h3>
+      <form (ngSubmit)="submitPayment()">
+        <label for="paidAmount">Paid Amount</label>
+        <input type="number" id="paidAmount" [(ngModel)]="paymentAmount" name="paidAmount" required>
+        <button type="submit">Submit</button>
+        <button (click)="closePaymentModal()">Cancel</button>
+      </form>
+    </div>
+    
+        </div>
+        
+      
+      
+  </div>
+  
+   <div class="targets">
+    <div class="finance"> 
+       <div class="show-info">
+       <div> Target: 15 </div>
+       <div> Actual: {{this.financeSignUps}} </div>
+       </div>
+      <canvas id="financeTargets"></canvas></div>
+      
+    <div class="analysis">
+      <div class="show-info">
+        <div> Target: 15 </div>
+        <div> Actual: {{this.AnalysisSignUps}} </div>
+        </div><canvas id="analysisTargets"></canvas></div>
+
+    <div class="timetable">
+      <div class="show-info">
+        <div> Target: 15 </div>
+        <div> Actual: {{this.timetableSignUps}} </div>
+        </div><canvas id="timetableTargets"></canvas></div>
+  </div>
+
+  <div class="signups">
+    <div class="finance"><canvas id="financeSignups"></canvas></div>
+    <div class="analysis"><canvas id="analysisSignups"></canvas></div>
+    <div class="timetable"><canvas id="timetableSignups"></canvas></div>
+    
+  </div>
+</div>
+</div>
+  
+  

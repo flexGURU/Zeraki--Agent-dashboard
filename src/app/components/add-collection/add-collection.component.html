@@ -1,0 +1,42 @@
+<div class="container">
+    <legend>Add Collection</legend>
+    <form>
+  
+      <div class="mb-3">
+        <label for="txtId" class="form-label">ID</label>
+        <input type="number" name="id" [(ngModel)]= "formdata.id" class="form-control" id="txtId" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtInvoiceId" class="form-label">Invoice ID</label>
+        <input type="number" name="invoiceId" [(ngModel)]= "formdata.invoiceId" class="form-control" id="txtInvoiceId" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtCollectionNumber" class="form-label">Collection Number</label>
+        <input type="text" name="collectionNumber" [(ngModel)]= "formdata.collectionNumber" class="form-control" id="txtCollectionNumber" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtDate" class="form-label">Date</label>
+        <input type="date" name="date" [(ngModel)]= "formdata.date" class="form-control" id="txtDate" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtStatus" class="form-label">Status</label>
+        <select name="status" [(ngModel)]= "formdata.status" class="form-control" id="txtStatus">
+          <option value="Valid">Valid</option>
+          <option value="Invalid">Invalid</option>
+          <option value="Pending">Pending</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="txtAmount" class="form-label">Amount</label>
+        <input type="number" name="amount" [(ngModel)]= "formdata.amount" class="form-control" id="txtAmount" />
+      </div>
+  
+      <button type="button" (click)="addNewCollection()" class="btn btn-primary">Add Collection</button>
+    </form>
+  </div>
+  

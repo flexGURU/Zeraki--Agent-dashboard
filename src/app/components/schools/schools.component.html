@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="section">
+    <h2>Schools</h2>
+    <ul class="school-list">
+      <li *ngFor="let school of schools" class="school-item">
+        <div class="school-row">
+          <span class="school-name">{{ school.name }}</span>
+          <button (click)="selectSchool(school)" class="school-button">Select</button>
+        </div>
+        <div *ngIf="selectedSchool && selectedSchool.id === school.id" class="school-details-container">
+          <div class="school-details">
+            <div class="school-details-header">
+              <h3>School Details</h3>
+              <button class="close-button" (click)="closeDetails()">&#10005;</button>
+            </div>
+            <div class="school-details-info">
+              <p>Id: {{ school.id }}</p>
+              <p>Name: {{ school.name }}</p>
+              <p>Type: {{ school.type }}</p>
+              <p>Products: {{ school.products.join(', ') }}</p>
+              <p>County: {{ school.county }}</p>
+              <p>Registration Date: {{ school.registrationDate }}</p>
+              <p>Contact Info: {{ school.contactInfo.email }} | {{ school.contactInfo.phone }}</p>
+              <p>School Balance: {{ school.balance }}</p>
+            </div>
+            <div class="school-actions">
+              <button class="action-button" [routerLink]="['/edit', school.id]">Edit</button>
+              <button type="button" (click)="deleteSchool(school.id)" class="action-button">Delete</button>
+            </div>
+          </div>
+          <div class="school-associated-info">
+            <div *ngIf="selectedSchool" class="section">
+              <h2>Invoices</h2>
+              <div class="invoice-filters">
+                <!-- Add filters for completed and pending invoices -->
+              </div>
+              <ul class="invoice-list">
+                <li *ngFor="let invoice of invoices" class="invoice-item">
+                  <div class="invoice-details">
+                    <span class="invoice-id">Invoice ID: {{ invoice.id }}</span>
+                    <span class="invoice-number">Invoice #: {{ invoice.invoiceNumber }}</span>
+                    <span class="invoice-item-name">Invoice Item: {{ invoice.invoiceItem }}</span>
+                    <span class="due-date">Due Date: {{ invoice.dueDate }}</span>
+                    <span class="amount">Amount: {{ invoice.amount }}</span>
+                    <span class="paid-amount">Paid Amount: {{ invoice.paidAmount }}</span>
+                    <span class="balance">Balance: {{ invoice.balance }}</span>
+                    <span class="status">Status: {{ invoice.status }}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div *ngIf="selectedSchool" class="section">
+              <h2>Collections</h2>
+              <ul class="collection-list">
+                <li *ngFor="let collection of collections" class="collection-item">
+                  <div class="collection-details">
+                    <span class="collection-id">ID: {{ collection.id }}</span>
+                    <span class="collection-number">Collection #: {{ collection.collectionNumber }}</span>
+                    <span class="collection-date">Date: {{ collection.date }}</span>
+                    <span class="collection-status">Status: {{ collection.status }}</span>
+                    <span class="collection-amount">Amount: {{ collection.amount }}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="add-data">
+    <div class="school">
+      <button routerLink="/addSchool" class="add-btn">Add School</button>
+    </div>
+    <div class="invoice">
+      <button routerLink="/addInvoice" class="add-btn">Add Invoice</button>
+    </div>
+    <div class="collections">
+      <button routerLink="/addCollection" class="add-btn">Add Collection</button>
+    </div>
+  </div>
+</div>

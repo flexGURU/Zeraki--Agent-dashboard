@@ -1,0 +1,189 @@
+{
+  "schools": [
+    {
+      "id": "1",
+      "name": "Greenwood High School",
+      "type": "Secondary",
+      "products": [
+        "Zeraki Analytics",
+        "Zeraki Finance",
+        "Zeraki Timetable"
+      ],
+      "county": "Nairobi",
+      "registrationDate": "2025-01-15",
+      "contactInfo": {
+        "email": "contact@greenwoodhigh.com",
+        "phone": "+254700000000"
+      },
+      "balance": 2000
+    },
+    {
+      "id": "2",
+      "name": "Bluebells Primary School",
+      "type": "Primary",
+      "products": [
+        "Zeraki Analytics"
+      ],
+      "county": "Mombasa",
+      "registrationDate": "2022-11-22",
+      "contactInfo": {
+        "email": "info@bluebellsprimary.com",
+        "phone": "+254711111111"
+      },
+      "balance": 1500
+    },
+    {
+      "id": "3",
+      "name": "Riverside Academy",
+      "type": "Secondary",
+      "products": [
+        "Zeraki Analytics",
+        "Zeraki Timetable"
+      ],
+      "county": "Kisumu",
+      "registrationDate": "2021-09-01",
+      "contactInfo": {
+        "email": "admin@riversideacademy.ac.ke",
+        "phone": "+254722222222"
+      },
+      "balance": 3500
+    },
+    {
+      "id": "4",
+      "name": "Sunshine Montessori",
+      "type": "Primary",
+      "products": [
+        "Zeraki Analytics",
+        "Zeraki Finance"
+      ],
+      "county": "Nakuru",
+      "registrationDate": "2020-05-15",
+      "contactInfo": {
+        "email": "info@sunshinemontessori.sch.ke",
+        "phone": "+254733333333"
+      },
+      "balance": 2200
+    },
+    {
+      "id": "5",
+      "name": "Hilltop International School",
+      "type": "Secondary",
+      "products": [
+        "Zeraki Analytics",
+        "Zeraki Finance",
+        "Zeraki Timetable"
+      ],
+      "county": "Eldoret",
+      "registrationDate": "2019-08-10",
+      "contactInfo": {
+        "email": "admin@hilltopinternational.edu",
+        "phone": "+254744444444"
+      },
+      "balance": 4000
+    }
+  ],
+  "invoices": [
+    {
+      "id": "1",
+      "schoolId": 1,
+      "invoiceNumber": "INV-1001",
+      "invoiceItem": "Zeraki Analytics",
+      "creationDate": "2025-04-01",
+      "dueDate": "2025-04-30",
+      "amount": 1000,
+      "paidAmount": 500,
+      "balance": 500,
+      "status": "Pending"
+    },
+    {
+      "id": "2",
+      "schoolId": 2,
+      "invoiceNumber": "INV-1002",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2025-03-15",
+      "dueDate": "2025-04-15",
+      "amount": 2000,
+      "paidAmount": 2000,
+      "balance": 0,
+      "status": "Completed"
+    },
+    {
+      "id": "3",
+      "schoolId": 3,
+      "invoiceNumber": "INV-1003",
+      "invoiceItem": "Zeraki Analytics",
+      "creationDate": "2025-05-01",
+      "dueDate": "2025-05-31",
+      "amount": 1500,
+      "paidAmount": 0,
+      "balance": 1500,
+      "status": "Pending"
+    },
+    {
+      "id": "4",
+      "schoolId": 4,
+      "invoiceNumber": "INV-1004",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2025-04-15",
+      "dueDate": "2025-05-15",
+      "amount": 1800,
+      "paidAmount": 900,
+      "balance": 900,
+      "status": "Partially Paid"
+    },
+    {
+      "id": "5",
+      "schoolId": 5,
+      "invoiceNumber": "INV-1005",
+      "invoiceItem": "Zeraki Analytics",
+      "creationDate": "2025-03-01",
+      "dueDate": "2025-03-31",
+      "amount": 2500,
+      "paidAmount": 2500,
+      "balance": 80,
+      "status": "Pending"
+    }
+  ],
+  "collections": [
+    {
+      "id": "1",
+      "invoiceId": 1,
+      "collectionNumber": "COL-2001",
+      "date": "2025-04-10",
+      "status": "Valid",
+      "amount": 500
+    },
+    {
+      "id": "2",
+      "invoiceId": 2,
+      "collectionNumber": "COL-2002",
+      "date": "2025-04-01",
+      "status": "Valid",
+      "amount": 2000
+    },
+    {
+      "id": "3",
+      "invoiceId": 4,
+      "collectionNumber": "COL-2003",
+      "date": "2025-04-20",
+      "status": "Valid",
+      "amount": 900
+    },
+    {
+      "id": "4",
+      "invoiceId": 5,
+      "collectionNumber": "COL-2004",
+      "date": "2025-03-25",
+      "status": "Valid",
+      "amount": 2500
+    },
+    {
+      "id": "5",
+      "invoiceId": 3,
+      "collectionNumber": "COL-2005",
+      "date": "2025-05-10",
+      "status": "Pending",
+      "amount": 1500
+    }
+  ]
+}
